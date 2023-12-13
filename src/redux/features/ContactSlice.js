@@ -23,7 +23,6 @@ export const getContacts = createAsyncThunk(
 export const updateContact = createAsyncThunk(
   "contacts/updateContact",
   async (values, { rejectWithValue }) => {
-    console.log(values);
     try {
       const response = await fetch(`${API}/contact/${values.id}`, {
         method: "PUT",
@@ -99,11 +98,9 @@ const ContactSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getContacts.fulfilled, (state, { payload }) => {
-        console.log(payload.data);
         state.contacts = payload.data;
       })
       .addCase(updateContact.fulfilled, (state, { payload }) => {
-        console.log(payload.data, state);
         const index = state.contacts.findIndex(
           (el) => el._id === payload.data._id
         );

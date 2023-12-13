@@ -26,7 +26,7 @@ import {
 
 const Phonebook = () => {
   const dispatch = useDispatch();
-  const { contacts } = useSelector((state) => state);
+  const { contacts } = useSelector((state) => state.contacts);
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -71,8 +71,8 @@ const Phonebook = () => {
         <hr className="mb-5"></hr>
 
         <div className="card-container">
-          {contacts?.contacts ? (
-            contacts?.contacts.map((el) => (
+          {contacts.length > 0 ? (
+            contacts?.map((el) => (
               <Card className="contact-card" key={el._id}>
                 <Card.Body>
                   <div className="card-top">
@@ -199,7 +199,7 @@ const Phonebook = () => {
               </Card>
             ))
           ) : (
-            <Skeleton count={5} />
+            <Skeleton count={10} />
           )}
         </div>
       </Container>

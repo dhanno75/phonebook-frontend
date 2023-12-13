@@ -16,7 +16,6 @@ const NewContact = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  console.log(formDetails);
   const handleChange = (e) => {
     e.preventDefault();
     setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
