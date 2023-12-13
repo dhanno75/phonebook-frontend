@@ -44,6 +44,10 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 Fetching all the contacts
 ![f1](https://github.com/dhanno75/phonebook-frontend/assets/52491490/0097c660-de57-419c-b101-bcef4155330e)
 
+Form page for adding a contact
+![f2](https://github.com/dhanno75/phonebook-frontend/assets/52491490/420fcd45-41b5-44a6-b496-60002ba8971c)
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
